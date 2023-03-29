@@ -8,8 +8,9 @@ body{
     display: grid;
     height: 100vh;
     grid-template-rows: 150px 1fr 100px;
-    margin: 0px 200px 0px 200px;
-    /* font-family: 'Righteous', cursive; */
+    margin: 0px 400px 0px 400px;
+    font-family: 'Righteous', cursive;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 header{
@@ -21,9 +22,6 @@ h1{
     place-items: center;
     place-content: center;
     gap: 10px;
-}
-
-.pt2{
     color: maroon;
 }
 
@@ -39,11 +37,13 @@ main{
     "principal secundaria"
     "principal secundaria";
     gap: 24px;
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: 7fr 6fr;
 }
 
 .img__principal{
     grid-area: principal;
+    background-image: url(./img/poster.jpg);
+    background-size: 99%;
     background-color: blue;
 
 }
@@ -59,41 +59,75 @@ main{
 }
 
 .img1{
-    background-color: lightcyan;
+    background-image: url(./img/eleven.jpg);
+    background-size: 140%;
     grid-area: img1;
 
 }
 
 .img2{
-    background-color: lightseagreen;
+    background-image: url(./img/california.webp);
+    background-size: 120%;
     grid-area: img2;
 
 }
 
 .img3{
-    background-color: limegreen;
+    background-image: url(./img/reuniaojpg.jpg);
+    background-size: cover;
     grid-area: img3;
 
 }
 
 .img4{
-    background-color: lightskyblue;
+    background-image: url(./img/eddy.webp);
+    background-size: cover;
     grid-area: img4;
 
 }
 
 .faixa__secundaria{
-    background-color: rgb(78, 80, 82);
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: 2fr 2fr 3fr;
+
 }
 
+.img5{
+    background-image: url(./img/vecna.webp);
+    background-size: 115%;
+}
 
+.img6{
+    background-image: url(./img/mundo_invertido_nancy.jpeg);
+    background-size: 115%;
+}
 
+.img7{
+    background-image: url(./img/max.png);
+    background-size: 95%;
+}
+    
 
-/* 
 footer{
-    background-color: lightsteelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ver__mais{
-    background-color: lightseagreen;
-} */
+    border-radius: 50px;
+    background-color: black;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ver__mais p{
+    color: white;
+    text-decoration: none;
+}

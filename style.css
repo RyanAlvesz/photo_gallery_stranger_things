@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 150px 1fr 100px;
+    margin: 0px 200px 0px 200px;
+    /* font-family: 'Righteous', cursive; */
+}
+
+header{
+    display: grid;
+}
+
+h1{
+    display: flex;
+    place-items: center;
+    place-content: center;
+    gap: 10px;
+}
+
+.pt2{
+    color: maroon;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 4fr 2fr;
+    row-gap: 24px;
+}
+
+.faixa__principal{
+    display: grid;
+    grid-template-areas: 
+    "principal secundaria"
+    "principal secundaria";
+    gap: 24px;
+    grid-template-columns: 600px 1fr;
+}
+
+.img__principal{
+    grid-area: principal;
+    background-color: blue;
+
+}
+
+.img__secundaria{
+    grid-area: secundaria;
+    display: grid;
+    grid-template-areas: 
+    "img1 img2"
+    "img3 img4";
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.img1{
+    background-color: lightcyan;
+    grid-area: img1;
+
+}
+
+.img2{
+    background-color: lightseagreen;
+    grid-area: img2;
+
+}
+
+.img3{
+    background-color: limegreen;
+    grid-area: img3;
+
+}
+
+.img4{
+    background-color: lightskyblue;
+    grid-area: img4;
+
+}
+
+.faixa__secundaria{
+    background-color: rgb(78, 80, 82);
+}
+
+
+
+
+/* 
+footer{
+    background-color: lightsteelblue;
+}
+
+.ver__mais{
+    background-color: lightseagreen;
+} */

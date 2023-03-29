@@ -7,9 +7,10 @@
 body{
     display: grid;
     height: 100vh;
-    grid-template-rows: 150px 1fr 100px;
+    grid-template-rows: 150px 1fr 150px;
     margin: 0px 400px 0px 400px;
     font-family: 'Righteous', cursive;
+    font-family: 'Tiro Devanagari Hindi', serif;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -18,17 +19,21 @@ header{
 }
 
 h1{
-    display: flex;
+    display: grid;
     place-items: center;
     place-content: center;
-    gap: 10px;
+    color: #102333;
+}
+
+p + p{
     color: maroon;
+    /* text-decoration-line: underline; */
 }
 
 main{
     display: grid;
     grid-template-rows: 4fr 2fr;
-    row-gap: 24px;
+    row-gap: 15px;
 }
 
 .faixa__principal{
@@ -36,16 +41,16 @@ main{
     grid-template-areas: 
     "principal secundaria"
     "principal secundaria";
-    gap: 24px;
+    gap: 15px;
     grid-template-columns: 7fr 6fr;
 }
 
 .img__principal{
     grid-area: principal;
     background-image: url(./img/poster.jpg);
-    background-size: 99%;
-    background-color: blue;
-
+    background-size: cover;
+    border-style: solid;
+    border-color: #102333
 }
 
 .img__secundaria{
@@ -54,33 +59,37 @@ main{
     grid-template-areas: 
     "img1 img2"
     "img3 img4";
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.img__secundaria *{
+    border-style: solid;
+    border-color: #102333;
 }
 
 .img1{
     background-image: url(./img/eleven.jpg);
-    background-size: 140%;
+    background-size: cover;
     grid-area: img1;
 
 }
 
 .img2{
-    background-image: url(./img/california.webp);
-    background-size: 120%;
+    background-image: url(./img/california.png);
+    background-size: cover;
     grid-area: img2;
 
 }
 
 .img3{
-    background-image: url(./img/reuniaojpg.jpg);
+    background-image: url(./img/mundo_invertido_nancy.jpeg);
     background-size: cover;
     grid-area: img3;
-
 }
 
 .img4{
-    background-image: url(./img/eddy.webp);
+    background-image: url(./img/eddy.png);
     background-size: cover;
     grid-area: img4;
 
@@ -88,26 +97,29 @@ main{
 
 .faixa__secundaria{
     display: grid;
-    column-gap: 24px;
+    column-gap: 15px;
     grid-template-columns: 2fr 2fr 3fr;
+}
 
+.faixa__secundaria *{
+    border-style: solid;
+    border-color: #102333;
 }
 
 .img5{
-    background-image: url(./img/vecna.webp);
-    background-size: 115%;
+    background-image: url(./img/vecna.png);
+    background-size: cover;
 }
 
 .img6{
-    background-image: url(./img/mundo_invertido_nancy.jpeg);
-    background-size: 115%;
+    background-image: url(./img/max__cemiterio.webp);
+    background-size: cover;
 }
 
 .img7{
-    background-image: url(./img/max.png);
-    background-size: 95%;
-}
-    
+    background-image: url(./img/reuniao.jpg);
+    background-size: cover;
+}   
 
 footer{
     display: flex;
@@ -117,17 +129,15 @@ footer{
 
 .ver__mais{
     border-radius: 50px;
-    background-color: black;
+    background-color: #102333;
     align-items: center;
     width: 150px;
     height: 40px;
-    font-size: 2vh;
+    font-size: 1.3em;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .ver__mais p{
     color: white;
-    text-decoration: none;
 }

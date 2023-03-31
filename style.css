@@ -9,9 +9,11 @@ body{
     height: 100vh;
     grid-template-rows: 150px 1fr 150px;
     margin: 0px 400px 0px 400px;
-    font-family: 'Righteous', cursive;
-    font-family: 'Tiro Devanagari Hindi', serif;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lora', serif;
+    /* background-image: url(./img/fundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
 
 header{
@@ -27,7 +29,6 @@ h1{
 
 p + p{
     color: maroon;
-    /* text-decoration-line: underline; */
 }
 
 main{
@@ -50,8 +51,57 @@ main{
     background-image: url(./img/poster.jpg);
     background-size: cover;
     border-style: solid;
-    border-color: #102333
+    border-color: #102333;
+    display: grid;
+    place-items: end start;
 }
+
+.faixa__informacoes {
+    height: 3em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    /* animation-duration: 2s;
+    animation-name: informacoes; */
+}
+
+.informacoes {
+    background-color: rgb(16, 35, 51,0.8);;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacoes p {
+    color: white;
+    opacity: 1;
+    font-size: 1em;
+    opacity: 1;
+}
+
+.comprar {
+    background-color: maroon;
+    display: grid;
+    place-items: center;
+}
+
+img[alt~="botao"] {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+
+/* @keyframes informacoes{
+
+    0% {
+    transform: translateZ(0);
+  }
+
+   100% {
+    transform: translateZ(10px);
+}
+
+} */
 
 .img__secundaria{
     grid-area: secundaria;

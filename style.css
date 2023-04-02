@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: grid;
     height: 100vh;
-    grid-template-rows: 150px 1fr 150px;
-    margin: 0px 400px 0px 400px;
+    grid-template-rows: 125px 1fr 125px;
+    margin: 0px 325px 0px 325px;
     font-family: 'Libre Baskerville', serif;
     font-family: 'Lora', serif;
     /* background-image: url(./img/fundo.jpg);
@@ -16,37 +16,38 @@ body{
     background-repeat: no-repeat; */
 }
 
-header{
+header {
     display: grid;
 }
 
-h1{
+h1 {
     display: grid;
     place-items: center;
     place-content: center;
     color: #102333;
+    font-size: 1.7em;
 }
 
-p + p{
+p+p {
     color: maroon;
 }
 
-main{
+main {
     display: grid;
     grid-template-rows: 4fr 2fr;
-    row-gap: 15px;
+    row-gap: 12px;
 }
 
-.faixa__principal{
+.faixa__principal {
     display: grid;
-    grid-template-areas: 
-    "principal secundaria"
-    "principal secundaria";
-    gap: 15px;
+    grid-template-areas:
+        "principal secundaria"
+        "principal secundaria";
+    gap: 12px;
     grid-template-columns: 7fr 6fr;
 }
 
-.img__principal{
+.img__principal {
     grid-area: principal;
     background-image: url(./img/poster.jpg);
     background-size: cover;
@@ -57,16 +58,20 @@ main{
 }
 
 .faixa__informacoes {
-    height: 3em;
+    height: 2.3em;
     width: 100%;
     display: grid;
     grid-template-columns: 8fr 1fr;
-    /* animation-duration: 2s;
-    animation-name: informacoes; */
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+.faixa__informacoes:hover {
+    opacity: 1;
 }
 
 .informacoes {
-    background-color: rgb(16, 35, 51,0.8);;
+    background-color: rgb(16, 35, 51, 0.8);
     display: grid;
     justify-content: center;
     align-items: center;
@@ -75,7 +80,7 @@ main{
 .informacoes p {
     color: white;
     opacity: 1;
-    font-size: 1em;
+    font-size: 0.9em;
     opacity: 1;
 }
 
@@ -83,101 +88,94 @@ main{
     background-color: maroon;
     display: grid;
     place-items: center;
+    align-items: center;
+}
+
+.comprar a {
+    display: grid;
+    place-items: center;
+    align-items: center;
 }
 
 img[alt~="botao"] {
-    height: 2.5em;
-    width: 2.5em;
+    height: 2em;
+    width: 2em;
 }
 
-
-/* @keyframes informacoes{
-
-    0% {
-    transform: translateZ(0);
-  }
-
-   100% {
-    transform: translateZ(10px);
-}
-
-} */
-
-.img__secundaria{
+.img__secundaria {
     grid-area: secundaria;
     display: grid;
-    grid-template-areas: 
-    "img1 img2"
-    "img3 img4";
-    column-gap: 15px;
-    row-gap: 15px;
+    grid-template-areas:
+        "img1 img2"
+        "img3 img4";
+    column-gap: 12px;
+    row-gap: 12px;
 }
 
-.img__secundaria *{
+.img__secundaria * {
     border-style: solid;
     border-color: #102333;
 }
 
-.img1{
+.img1 {
     background-image: url(./img/eleven.jpg);
     background-size: cover;
     grid-area: img1;
 
 }
 
-.img2{
+.img2 {
     background-image: url(./img/california.png);
     background-size: cover;
     grid-area: img2;
 
 }
 
-.img3{
+.img3 {
     background-image: url(./img/mundo_invertido_nancy.jpeg);
     background-size: cover;
     grid-area: img3;
 }
 
-.img4{
+.img4 {
     background-image: url(./img/eddy.png);
     background-size: cover;
     grid-area: img4;
-
 }
 
-.faixa__secundaria{
+.faixa__secundaria {
     display: grid;
-    column-gap: 15px;
+    column-gap: 12px;
     grid-template-columns: 2fr 2fr 3fr;
 }
 
-.faixa__secundaria *{
+.faixa__secundaria * {
     border-style: solid;
     border-color: #102333;
 }
 
-.img5{
+.img5 {
     background-image: url(./img/vecna.png);
     background-size: cover;
 }
 
-.img6{
+.img6 {
     background-image: url(./img/max__cemiterio.webp);
     background-size: cover;
 }
 
-.img7{
+.img7 {
     background-image: url(./img/reuniao.jpg);
     background-size: cover;
-}   
+}
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ver__mais{
+.ver__mais {
     border-radius: 50px;
     background-color: #102333;
     align-items: center;
@@ -186,8 +184,24 @@ footer{
     font-size: 1.3em;
     display: flex;
     justify-content: center;
+    animation: pular 2s ease-in-out alternate infinite ; 
 }
 
-.ver__mais p{
+@keyframes pular {
+    to{
+        transform: scale(1.1);
+    }
+}
+
+.ver__mais:hover {
+    background-color: #163652;
+    border-style: solid;
+    border-color: #102333;
+    animation-play-state: paused;
+}
+
+.ver__mais * {
+    text-decoration: none;
     color: white;
 }
+

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 body {
@@ -13,8 +13,11 @@ body {
     font-family: 'Libre Baskerville', serif;
     font-family: 'Lora', serif;
     background-color: #f1f1f1;
-    
 }
+
+
+/* TÍTULO */
+
 
 header {
     display: grid;
@@ -29,14 +32,20 @@ h1 {
 }
 
 p+p {
-    color: maroon;
+    color: #610404;
 }
+
+/* CONTEÚDO PRINCIPAL */
 
 main {
     display: grid;
     grid-template-rows: 4fr 2fr;
     row-gap: 10px;
 }
+
+
+/* CONTAINER DE CIMA */
+
 
 .faixa__principal {
     display: grid;
@@ -47,6 +56,11 @@ main {
     grid-template-columns: 7fr 6fr;
 }
 
+
+
+/* IMAGEM DA ESQUERDA */
+
+
 .img__principal {
     grid-area: principal;
     background-image: url(./img/poster.jpg);
@@ -54,6 +68,10 @@ main {
     display: grid;
     place-items: end start;
 }
+
+
+/* FAIXA DE INFORMAÇÕES */
+
 
 .faixa__informacoes {
     height: 2.5em;
@@ -64,37 +82,27 @@ main {
     transition-duration: .2s;
 }
 
-div[alt~="imgp"]:hover{
-    transform: scale(1.1);
-}
-
-div[alt~="imgp"]:hover > .faixa__informacoes{
-    opacity: 1;
-}
-
-.faixa__informacoes *{
-    border-radius: 0;
-}
 
 .informacoes {
     background-color: rgb(16, 35, 51, 0.8);
     display: grid;
     justify-content: center;
     align-items: center;
+    border-radius: 0px 0px 0px 10px;
 }
 
 .informacoes p {
     color: white;
     opacity: 1;
     font-size: 0.9em;
-    opacity: 1;
 }
 
 .comprar {
-    background-color: maroon;
+    background-color: #610404;
     display: grid;
     place-items: center;
     align-items: center;
+    border-radius: 0px 0px 10px 0px;
 }
 
 .comprar a {
@@ -108,6 +116,21 @@ img[alt~="botao"] {
     width: 2em;
 }
 
+
+/* ANIMAÇÃO DA FAIXA DE INFORMAÇÕES */
+
+
+div[alt~="imgp"]:hover{
+    transform: scale(1.1);
+}
+
+div[alt~="imgp"]:hover > .faixa__informacoes{
+    opacity: 1;
+}
+
+/* CONTAINER DA DIREITA */
+
+
 .img__secundaria {
     grid-area: secundaria;
     display: grid;
@@ -116,6 +139,13 @@ img[alt~="botao"] {
         "img3 img4";
     column-gap: 10px;
     row-gap: 10px;
+}
+
+
+/* IMGAGENS DO CONTAINER DA DIRETA */
+
+.img__secundaria > div{
+    display: grid;
 }
 
 .img1 {
@@ -144,11 +174,24 @@ img[alt~="botao"] {
     grid-area: img4;
 }
 
+
+/* CONTAINER DE BAIXO */
+
+
 .faixa__secundaria {
     display: grid;
     column-gap: 10px;
     grid-template-columns: 2fr 2fr 3fr;
 }
+
+
+/* IMAGENS DO CONTAINER DE BAIXO */
+
+
+.faixa__secundaria > div{
+    display: grid;
+}
+
 
 .img5 {
     background-image: url(./img/vecna.png);
@@ -165,9 +208,21 @@ img[alt~="botao"] {
     background-size: cover;
 }
 
+
+/* ANIMAÇÕES DAS IMAGENS */
+
+
+div[alt~="img"]:hover > .faixa__informacoes{
+    opacity: 1;
+}
+
 div[alt~="img"]:hover{
     transform: scale(1.2);
 }
+
+
+/* BOTÃO VER MAIS */
+
 
 footer {
     display: flex;
@@ -186,6 +241,15 @@ footer {
     justify-content: center;
 }
 
+.ver__mais * {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* ANIMAÇÃO DO BOTÃO */
+
+
 .ver__mais:hover {
     background-color: #163652;
     border-style: solid;
@@ -193,8 +257,8 @@ footer {
     transform: scale(1.1);
 }
 
-.ver__mais * {
-    text-decoration: none;
-    color: white;
-}
+/* ANIMAÇÃO FAIXA DE INFORMAÇÕES GERAL */
 
+div[alt~="img"] > .faixa__informacoes{
+    place-self: end start;
+}
